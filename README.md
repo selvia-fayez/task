@@ -13,7 +13,13 @@
 2.	Install the dependencies: cd angular-deals-pipeline && npm install
 3.	Start the application: npm start
 4.	Open the application in your browser: http://localhost:4200
+
+## Screenshots from the app
+#### _ Display all Deals _
 ![Main](main.png)
+#### _ Drag from Offer Sent Stage and Drop to Contact Made Stage _
 ![Drag & Drop](drag&drop.png)
+#### _ Search by name or email _
 ![Search](search.png)
+#### _ Mobile Screen _
 ![Responsive](Responsive.png)
