@@ -1,5 +1,5 @@
 # _ Angular Deals Pipeline Application _ 
-#### _This is a Responsive Angular application that fetches deals data from a public CRM Contacts API endpoint and displays it in a visual pipeline divided into five stages. Users can drag and drop deals between the stages. The application also provides a search functionality to search for contacts based on first name, last name, or email._
+### This is a Responsive Angular application that fetches deals data from a public CRM Contacts API endpoint and displays it in a visual pipeline divided into five stages. Users can drag and drop deals between the stages. The application also provides a search functionality to search for contacts based on first name, last name, or email.
 ## Application Structure
 #### The application follows a component-based architecture and uses Angular best practices such as dependency injection and observables. The following are the main components:
 1.	deal.service - The Service that loads the deals data from the API and passes it to all Component.
