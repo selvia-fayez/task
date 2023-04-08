@@ -1,0 +1,103 @@
+<app-navbar></app-navbar>
+<div class="row w-100 ps-5 mt-4" cdkDropListGroup>
+  <div class="d-flex align-items-center mb-2 w-100 ps-0">
+    <div class="ms-auto d-flex align-items-center w-100 row gap-2">
+      <h1 class="deals col-md-2 ps-0">Deals</h1>
+      <div class="d-flex align-items-center dropdownLists col-md-4 me-0">
+        <div class="dropdown mx-1">
+          <button
+            class="btn btn-outline-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Segment: All
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <option class="dropdown-item" href="#">Segment A (21)</option>
+            <option class="dropdown-item" href="#">Segment B (7)</option>
+            <option class="dropdown-item" href="#">Segment C (2)</option>
+          </div>
+        </div>
+        <div class="dropdown mx-1">
+          <button
+            class="btn btn-outline-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Assigne: All
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <option class="dropdown-item" href="#">Assigne A (21)</option>
+            <option class="dropdown-item" href="#">Assigne B (7)</option>
+            <option class="dropdown-item" href="#">Assigne C (2)</option>
+          </div>
+        </div>
+        <div class="dropdown mx-1">
+          <button
+            class="btn btn-outline-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Status: All
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <option class="dropdown-item" href="#">Potential Value (2)</option>
+            <a class="dropdown-item" href="#">Focus (2)</a>
+            <a class="dropdown-item" href="#">Contact Made (2)</a>
+            <a class="dropdown-item" href="#">Offer Sent (2)</a>
+            <a class="dropdown-item" href="#">Getting Ready (2)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col ps-0 d-flex">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search by name or email"
+          aria-label="Search"
+          [(ngModel)]="word"
+        />
+        <button class="btn btn-outline-info" type="submit">
+          <i class="fa-solid fa-search"></i>
+        </button>
+      </div>
+
+      <div class="col-md-2">
+        <button class="btn btn-primary">
+          <i class="fa-solid fa-circle-plus"></i> ADD DEAL
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngFor="let stage of stages" class="m-1 rounded pt-2 stage">
+    <h4 class="mb-1 stageName">{{ stage }}</h4>
+    <div
+      class="d-flex align-items-center row"
+      style="color: #a5a5a5; font-size: 12px"
+    >
+      <p class="col-3 fw-bold"><i class="fa-regular fa-clipboard"></i> 29</p>
+      <div class="col-6 fw-bold d-flex align-items-center">
+        <p
+          style="font-size: 8px; background-color: #c1c1c1; padding: 3px"
+          class="rounded text-white me-1"
+        >
+          NOK
+        </p>
+        <p>2.36 k</p>
+      </div>
+      <p class="col-3 fw-bold"><i class="fa-solid fa-bell"></i> 2</p>
+    </div>
+    <app-deals [stage]="stage" [word]="word"></app-deals>
+  </div>
+</div>

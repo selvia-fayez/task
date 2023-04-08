@@ -1,0 +1,12 @@
+<div class="row">
+  
+  <div
+    *ngFor="let deal of customDeals | search : word"
+    class="p-1"
+    cdkDropList
+    [cdkDropListData]="customDeals"
+    (cdkDropListDropped)="onDrop($event)"
+  >
+    <app-deal [deal]="deal"></app-deal>
+  </div>
+</div>
